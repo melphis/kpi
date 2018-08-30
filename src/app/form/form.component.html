@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Форма редактирования KPI</h2>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        class="form-control"
+        placeholder="Название"
+        name="name"
+        [(ngModel)]="data.name"/>
+
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="number"
+        class="form-control"
+        placeholder="Значение"
+        name="value"
+        [(ngModel)]="data.value" />
+    </mat-form-field>
+  </form>
+</div>

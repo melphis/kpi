@@ -1,0 +1,38 @@
+.block {
+  height: 100%;
+  border: 2px solid #c4c4c4;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.block.disabled {
+  background-color: #F1F1F1;
+  cursor: initial;
+}
+
+.block.active {
+  border-color: lightblue;
+}
+
+.row.name {
+  margin-bottom: 10px;
+}
+
+.type-value {
+  color: #DADFE8;
+}
+
+mat-icon ,
+.diff-value {
+  vertical-align: middle;
+  color: #999999;
+}
+
+mat-icon.up {
+  color: green;
+}
+
+mat-icon.down {
+  color: red;
+}

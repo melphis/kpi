@@ -1,0 +1,9 @@
+.kpies {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+app-kpi {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}

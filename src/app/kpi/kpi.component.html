@@ -1,0 +1,29 @@
+<div class="block"
+     [ngClass]="{disabled: data.value === null, active: data.isActive}"
+     (click)="onClick()">
+
+  <div class="row name">{{data.name}}</div>
+  <div *ngIf="data.value === null; then noValue else value"></div>
+  <div *ngIf="data.diff === null; then noDiff else diff"></div>
+
+</div>
+
+<!-- #value -->
+<ng-template #value>
+  <div class="row">{{data.value}} <span class="type-value">{{data.typeValue}}</span></div>
+</ng-template>
+<ng-template #noValue>
+  <div class="row">-</div>
+</ng-template>
+
+<!-- #diff -->
+<ng-template #diff>
+  <div class="row">
+    <mat-icon class="up" *ngIf="data.diff > 0">arrow_upward</mat-icon>
+    <mat-icon class="down" *ngIf="data.diff < 0">arrow_downward</mat-icon>
+    <span class="diff-value">{{data.diff}}</span>
+  </div>
+</ng-template>
+<ng-template #noDiff>
+  <div class="row diff-value">— Нет данных</div>
+</ng-template>
